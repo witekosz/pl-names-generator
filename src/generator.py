@@ -1,5 +1,5 @@
 from random import randint
-from data_names import (
+from src.data_names import (
     FIRST_NAMES_F,
     FIRST_NAMES_M,
     LAST_NAMES_F,

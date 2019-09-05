@@ -1,4 +1,5 @@
-from generator import generate_people
+from src.generator import generate_people
+from time import sleep
 
 
 print("Hello! Generate random polish names")
@@ -23,8 +24,10 @@ while 1==1:
     
     break
 
-print(str(input_number_names), input_gender)
+print(f"Generating names: gender-> {input_gender}, {number_names} times")
 
-print(f"Generating names: gender->{input_gender}, {number_names} times")
+sleep(1.5)
 
-print(generate_people(number_names, input_gender))
+for e in (generate_people(number_names, input_gender)):
+    print(e)
+    sleep(0.1)
