@@ -1,11 +1,11 @@
-from src.generator import generate_people
 from time import sleep
 
+from src.generator import generate_people
 
-print("Hello! Generate random polish names")
 
-while 1==1:
+print("Generating random names")
 
+while True:
     input_number_names = input("Type number of names to generate: ")
 
     if input_number_names.isdigit() and int(input_number_names) > 0:
@@ -21,7 +21,7 @@ while 1==1:
     else:
         print("Provide correct gender")
         break
-    
+
     break
 
 print(f"Generating names: gender-> {input_gender}, {number_names} times")

@@ -1,10 +1,6 @@
-from random import randint
-from src.data_names import (
-    FIRST_NAMES_F,
-    FIRST_NAMES_M,
-    LAST_NAMES_F,
-    LAST_NAMES_M
-)
+from random import choice
+
+from src import data_names
 
 
 def generate_people(number=25, gender='M'):
@@ -18,21 +14,20 @@ def generate_people(number=25, gender='M'):
     """
 
     if gender == 'M':
-        list_first_names = FIRST_NAMES_M
-        list_second_names = LAST_NAMES_M
+        list_first_names = data_names.FIRST_NAMES_M
+        list_second_names = data_names.LAST_NAMES_M
     elif gender == 'F':
-        list_first_names = FIRST_NAMES_F
-        list_second_names = LAST_NAMES_F
+        list_first_names = data_names.FIRST_NAMES_F
+        list_second_names = data_names.LAST_NAMES_F
     else:
         return "Provide valid gender type!"
 
     names_list = []
     for e in range(number):
-        
-        temp_name = list_first_names[randint(0, len(list_first_names)-1)]
-        temp_surname = list_second_names[randint(0, len(list_second_names)-1)]
+        temp_name = choice(list_first_names)
+        temp_surname = choice(list_second_names)
         temp_person = f"{temp_name} {temp_surname}"
 
         names_list.append(temp_person)
-    
+
     return names_list

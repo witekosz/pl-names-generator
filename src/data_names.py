@@ -1,4 +1,3 @@
-
 FIRST_NAMES_F = [
 "Anna",
 "Maria",
